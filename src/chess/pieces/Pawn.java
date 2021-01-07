@@ -45,14 +45,13 @@ public class Pawn extends ChessPiece {
                 mat[p.getRow()][p.getColumn()] = true;
             }
 
-
             //testa se tem peça preta na diagonal - lado direito
             p.setValues(position.getRow() - 1, position.getColumn() + 1);
             if(getBoard().positionExists(p) && isThereOpponentPiece(p)){
                 mat[p.getRow()][p.getColumn()] = true;
             }
         }
-        //peça branca
+        //peça preta
         else{
 
             //1 linha a frente - peao
@@ -80,13 +79,11 @@ public class Pawn extends ChessPiece {
                 mat[p.getRow()][p.getColumn()] = true;
             }
 
-
             //testa se tem peça preta na diagonal - lado direito
             p.setValues(position.getRow() + 1, position.getColumn() + 1);
             if(getBoard().positionExists(p) && isThereOpponentPiece(p)){
                 mat[p.getRow()][p.getColumn()] = true;
             }
-
         }
         return mat;
     }
